@@ -46,6 +46,13 @@ const plugins = [
       secret_access_key: process.env.SPACE_SECRET_ACCESS_KEY,
     },
   },
+  {
+    resolve: `@medusajs/file-local`,
+    options: {
+      upload_dir: '/app/uploads',
+      backend_url: 'http://192.168.1.42:9002'
+    },
+  },
   // To enable the admin plugin, uncomment the following lines and run `npm add @medusajs/admin`
   {
     resolve: "@medusajs/admin",
